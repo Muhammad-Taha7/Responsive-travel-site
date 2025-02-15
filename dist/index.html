@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelling Website Design with Tailwind CSS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="/src/input.css">
+</head>
+<body>
+    <!-- NavBar Section -->
+     <nav class="w-full h-[5rem] p-4 px-8  fixed lg:px-20 flex flex-wrap justify-between items-center bg-[#333333]">
+        <a href="#">
+            <h2 class="text-[2.2rem] font-poppins text-white font-medium  ">Logo</h2>
+        </a>
+         <div class="hidden links md:flex flex-wrap justify-center items-center gap-9 ">
+            <a href="#" class="text-[1rem] font-poppins text-white  hover:text-gray-500 duration-300">Home</a>
+            <a href="#Services" class="text-[1rem] font-poppins text-white  hover:text-gray-500 duration-300">Services</a>
+            <a href="#Portfolio" class="text-[1rem] font-poppins text-white  hover:text-gray-500 duration-300">Portfolio</a>
+            <a href="#AboutUs" class="text-[1rem] font-poppins text-white  hover:text-gray-500 duration-300">About Us</a>
+            <a href="#ContactUs" class="text-[1rem] font-poppins text-white  hover:text-gray-500 duration-300">Contact Us</a>
+         </div>
+        
+       <button class="text-white text-2xl md:hidden" onclick="handleMenu()">
+        <i class="fa-solid fa-bars"></i>
+       </button>
+
+     </nav>
+     <!-- nav-Dialog -->
+     <div id="Nav-dialog" class="fixed inset-0 hidden bg-[#333333] ">
+        <nav class="w-full h-[5rem] p-4 px-8  lg:px-20 flex flex-wrap justify-between items-center bg-[#333333]">
+            <a href="#">
+                <h2 class="text-[2.2rem] font-poppins text-white font-medium  ">Logo</h2>
+            </a>
+            <button class="text-white text-2xl md:hidden" onclick="handleMenu()">
+            <i class="fa-solid fa-x"></i>
+            </button>
+        </nav>
+        <div class="nav-dialog-links mt-32 flex flex-col justify-center items-center gap-7 bg-[#333333]">       
+        <a href="#" class="text-[1.5rem]  font-poppins text-white  hover:text-gray-500 duration-300">Home</a>
+        <a href="#" class="text-[1.5rem] font-poppins text-white  hover:text-gray-500 duration-300">Services</a>
+        <a href="#" class="text-[1.5rem] font-poppins text-white  hover:text-gray-500 duration-300">Portfolio</a>
+        <a href="#" class="text-[1.5rem] font-poppins text-white  hover:text-gray-500 duration-300">About Us</a>
+        <a href="#" class="text-[1.5rem] font-poppins text-white  hover:text-gray-500 duration-300">Contact Us</a>
+        
+    </div> 
+
+     </div>
+
+     <!-- Hero Section -->
+      <div class="main min-h-screen w-[100%] flex justify-center items-center flex-wrap  bg-[url(/images/home-bg.jpg)] bg-center bg-cover">
+             <div class="center-main h-[15rem]  md:h-[33rem] md:w-[47rem] mt-[0rem] md:mt-[18rem] ">
+                   <h1 class="text-[2.3rem] md:text-[3rem] font-bold font-poppins text-white text-center">Camping Gear and Essentials</h1>
+                   <p class="text-center font-poppins md:text-[1.3rem] text-white mt-4">Discover top-quality camping gear for unforgettable outdoor adventures. Gear up and make lasting memories.</p>
+                  <div class=" flex flex-wrap justify-center mt-6">
+                    <button class="py-2 px-6 bg-white rounded-lg font-medium border-2 font-poppins hover:text-white hover:bg-transparent duration-300 hover:border-2 border-white  ">OUR SERVICES</button>
+                  </div>
+                </div>
+      </div>
+
+     <!-- Services Section -->
+<div id="Services" class="services p-10  md:p-20 w-full">
+    <h1 class="text-4xl font-poppins text-black font-bold text-center pt-2">Our Services</h1>
+    <p class="text-center font-poppins mt-1">Explore our wide range of camping gear services.</p>
+    
+    <!-- Cards Container -->
+    <div class="cards mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+        <!-- Card Template -->
+        <div class="card1 cursor-pointer shadow-[0px_1px_3px_0px_rgba(0,0,0,0.02),0px_0px_0px_1px_rgba(27,31,35,0.15)] hover:shadow-[0px_5px_15px_rgba(0,0,0,0.35)] duration-300 h-[22rem] w-[20rem] bg-white rounded-lg flex flex-col justify-center items-center">
+            <div class="img h-[7rem] w-[7rem] rounded-full bg-black overflow-hidden">
+                <img class="h-full w-full object-cover" src="/images/tents.jpg" alt="Tents">
+            </div>
+            <h1 class="text-center font-poppins text-[1.6rem] font-medium mt-5">Tents</h1>
+            <p class="text-center font-poppins text-[0.9rem] px-5 py-3 mt-2">Experience comfort and protection with our high-quality camping tents.</p>
+        </div>
+        
+        <div class="card1 cursor-pointer shadow-[0px_1px_3px_0px_rgba(0,0,0,0.02),0px_0px_0px_1px_rgba(27,31,35,0.15)] hover:shadow-[0px_5px_15px_rgba(0,0,0,0.35)] duration-300 h-[22rem] w-[20rem] bg-white rounded-lg flex flex-col justify-center items-center">
+            <div class="img h-[7rem] w-[7rem] rounded-full bg-black overflow-hidden">
+                <img class="h-full w-full object-cover" src="/images/bags.jpg" alt="Sleeping Bags">
+            </div>
+            <h1 class="text-center font-poppins text-[1.5rem] font-medium mt-5">Sleeping Bags</h1>
+            <p class="text-center font-poppins text-[0.85rem] px-5 py-3 mt-1">Stay cozy and warm during your camping trips with our premium sleeping bags.</p>
+        </div>
+        
+        <div class="card1 cursor-pointer shadow-[0px_1px_3px_0px_rgba(0,0,0,0.02),0px_0px_0px_1px_rgba(27,31,35,0.15)] hover:shadow-[0px_5px_15px_rgba(0,0,0,0.35)] duration-300 h-[22rem] w-[20rem] bg-white rounded-lg flex flex-col justify-center items-center">
+            <div class="img h-[7rem] w-[7rem] rounded-full bg-black overflow-hidden">
+                <img class="h-full w-full object-cover" src="/images/stoves.jpg" alt="Camp Stoves">
+            </div>
+            <h1 class="text-center font-poppins text-[1.5rem] font-medium mt-5">Camp Stoves</h1>
+            <p class="text-center font-poppins text-[0.85rem] px-5 py-3 mt-1">Cook delicious meals in the great outdoors with our reliable camp stoves.</p>
+        </div>
+        
+        <div class="card1 cursor-pointer shadow-[0px_1px_3px_0px_rgba(0,0,0,0.02),0px_0px_0px_1px_rgba(27,31,35,0.15)] hover:shadow-[0px_5px_15px_rgba(0,0,0,0.35)] duration-300 h-[22rem] w-[20rem] bg-white rounded-lg flex flex-col justify-center items-center">
+            <div class="img h-[7rem] w-[7rem] rounded-full bg-black overflow-hidden">
+                <img class="h-full w-full object-cover" src="/images/backpacks.jpg" alt="Backpacks">
+            </div>
+            <h1 class="text-center font-poppins text-[1.5rem] font-medium mt-5">Backpacks</h1>
+            <p class="text-center font-poppins text-[0.85rem] px-5 py-3 mt-1">Carry your essentials comfortably with our durable and functional camping backpacks.</p>
+        </div>
+        
+        <div class="card1 cursor-pointer shadow-[0px_1px_3px_0px_rgba(0,0,0,0.02),0px_0px_0px_1px_rgba(27,31,35,0.15)] hover:shadow-[0px_5px_15px_rgba(0,0,0,0.35)] duration-300 h-[22rem] w-[20rem] bg-white rounded-lg flex flex-col justify-center items-center">
+            <div class="img h-[7rem] w-[7rem] rounded-full bg-black overflow-hidden">
+                <img class="h-full w-full object-cover" src="/images/chair.jpg" alt="Camp Chairs">
+            </div>
+            <h1 class="text-center font-poppins text-[1.5rem] font-medium mt-5">Camp Chairs</h1>
+            <p class="text-center font-poppins text-[0.85rem] px-5 py-3 mt-1">Relax and unwind in style with our comfortable and portable camping chairs.</p>
+        </div>
+        
+        <div class="card1 cursor-pointer shadow-[0px_1px_3px_0px_rgba(0,0,0,0.02),0px_0px_0px_1px_rgba(27,31,35,0.15)] hover:shadow-[0px_5px_15px_rgba(0,0,0,0.35)] duration-300 h-[22rem] w-[20rem] bg-white rounded-lg flex flex-col justify-center items-center">
+            <div class="img h-[7rem] w-[7rem] rounded-full bg-black overflow-hidden">
+                <img class="h-full w-full object-cover" src="/images/light.jpg" alt="Camp Lights">
+            </div>
+            <h1 class="text-center font-poppins text-[1.5rem] font-medium mt-5">Camp Lights</h1>
+            <p class="text-center font-poppins text-[0.85rem] px-5 py-3 mt-1">Illuminate your campsite with our reliable and energy-efficient camping lights.</p>
+        </div>
+    </div>
+</div>
+
+     <!-- Portfolio Section -->
+<div  id="Portfolio" class="portfolio-section mt-[2rem] md:mt-[0rem]  py-12 lg:px-[7rem]">
+    <h1 class="text-4xl font-poppins text-black font-bold text-center">Our Portfolio</h1>
+    <p class="text-center font-poppins mt-2 px-6 md:px-20">
+        Take a look at some of our memorable camping adventures.
+    </p>
+
+    <!-- Portfolio Cards -->
+    <div class="portfolio-cards  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-10  md:px-12 mt-10">
+        <!-- Card Component -->
+        <div class="card  rounded-lg shadow-[0px_1px_3px_0px_rgba(0,0,0,0.02),0px_0px_0px_1px_rgba(27,31,35,0.15)] hover:shadow-[0px_5px_15px_rgba(0,0,0,0.35)] duration-300 overflow-hidden">
+            <img class="h-56 w-full object-cover" src="/images/camping-1.jpg" alt="Mountain Hiking">
+            <div class="text-center p-4">
+                <h1 class="font-poppins font-medium text-xl">Mountain Hiking</h1>
+                <p class="font-poppins text-sm mt-2 px-[3rem]">Embark on an exhilarating hiking adventure in breathtaking landscapes.</p>
+            </div>
+        </div>
+
+        <div class="card  rounded-lg shadow-[0px_1px_3px_0px_rgba(0,0,0,0.02),0px_0px_0px_1px_rgba(27,31,35,0.15)] hover:shadow-[0px_5px_15px_rgba(0,0,0,0.35)] duration-300 overflow-hidden">
+            <img class="h-56 w-full object-cover" src="/images/camping-2.jpg" alt="Lakeside Camping">
+            <div class="text-center p-4">
+                <h1 class="font-poppins font-medium text-xl">Lakeside Camping</h1>
+                <p class="font-poppins text-sm mt-2 px-[3rem]">Enjoy a tranquil camping experience by the serene shores of picturesque lakes.</p>
+            </div>
+        </div>
+
+        <div class="card  rounded-lg shadow-[0px_1px_3px_0px_rgba(0,0,0,0.02),0px_0px_0px_1px_rgba(27,31,35,0.15)] hover:shadow-[0px_5px_15px_rgba(0,0,0,0.35)] duration-300 overflow-hidden">
+            <img class="h-56 w-full object-cover" src="/images/camping-3.jpg" alt="Beach Camping">
+            <div class="text-center p-4">
+                <h1 class="font-poppins font-medium text-xl">Beach Camping</h1>
+                <p class="font-poppins text-sm mt-2 px-[3rem]">Relax on sandy beaches and camp under the starry sky by the crashing waves.</p>
+            </div>
+        </div>
+
+        <div class="card  rounded-lg shadow-[0px_1px_3px_0px_rgba(0,0,0,0.02),0px_0px_0px_1px_rgba(27,31,35,0.15)] hover:shadow-[0px_5px_15px_rgba(0,0,0,0.35)] duration-300 overflow-hidden">
+            <img class="h-56 w-full object-cover" src="/images/camping-4.jpg" alt="Forest Exploration">
+            <div class="text-center p-4">
+                <h1 class="font-poppins font-medium text-xl">Forest Exploration</h1>
+                <p class="font-poppins text-sm mt-2 px-[3rem]">Discover the wonders of lush forests and immerse yourself in nature's beauty.</p>
+            </div>
+        </div>
+
+        <div class="card  rounded-lg shadow-[0px_1px_3px_0px_rgba(0,0,0,0.02),0px_0px_0px_1px_rgba(27,31,35,0.15)] hover:shadow-[0px_5px_15px_rgba(0,0,0,0.35)] duration-300 overflow-hidden">
+            <img class="h-56 w-full object-cover" src="/images/camping-5.jpg" alt="RV Camping">
+            <div class="text-center p-4">
+                <h1 class="font-poppins font-medium text-xl">RV Camping</h1>
+                <p class="font-poppins text-sm mt-2 px-[3rem]">Experience the freedom of road trips and camping adventures with our RV rentals.</p>
+            </div>
+        </div>
+
+        <div class="card  rounded-lg shadow-[0px_1px_3px_0px_rgba(0,0,0,0.02),0px_0px_0px_1px_rgba(27,31,35,0.15)] hover:shadow-[0px_5px_15px_rgba(0,0,0,0.35)] duration-300 overflow-hidden">
+            <img class="h-56 w-full object-cover" src="/images/camping-6.jpg" alt="Desert Camping">
+            <div class="text-center p-4">
+                <h1 class="font-poppins font-medium text-xl">Desert Camping</h1>
+                <p class="font-poppins text-sm mt-2 px-[3rem]">Embark on a unique desert camping experience and witness stunning landscapes.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+       <!-- About Us -->
+       <div id="AboutUs" class="about-section h-[68rem] md:h-[50rem] mt-[5rem] w-full ">
+        <h1 class="text-4xl font-poppins text-black font-bold text-center">About Us</h1>
+        <p class="text-center font-poppins mt-2 px-10 md:px-20">
+           Discover our story in providing camping services.
+        </p>
+         <div class="text-section md:p-20 mt-14 font-poppins  px-10">
+             <h1 class="font-bold text-[1.5rem]">Our Story</h1>
+             <p class="mt-2">Experience the excellence of our camping gear and services, where we have beem offering high-quality camping essentials and gear for outdoor enthusiasts for over a decade. Our commitment to quality and customer satisfaction ensures that every adventurer can rely on us for their camping needs.</p>
+              <h1 class="font-bold text-[1.5rem] mt-1">Our Mission</h1>
+              <p class="mt-2">At Camping Gear Experts, our mission is to equip outdoor enthusiasts with top-notch camping gear and essentials that enhance their outdoor experience. We strive to provide reliable, durable and innovative products that contribute to memorable adventures and lasting memories.</p>
+              <h1 class="font-bold text-[1.5rem] mt-1">Our Vision</h1>
+              <p class="mt-2">Our vision is to become the go-to destination for camping enthusiasts, known for our extensive selection of premium camping gear and exceptional customer service. We aspire to inspire and enable people to embrace the beauty of nature and create unforgettable camping experiences.</p>
+              <h1 class="font-bold text-[1.5rem] mt-1">Our Team</h1>
+              <ul class="list-disc list-inside space-y-2 mt-3 ">
+                <li>John Doe - Founder and CEO</li>
+                <li>John Smith - Gear Specialist</li>
+                <li>Mark Johnson - Customer Representative</li>
+                <li>Sarah Brown - Operations Manager</li>
+              </ul>
+            </div>
+       </div>
+
+       <!-- Contact Us -->
+
+       <div id="ContactUs" class="contact_us min-h-screen w-full mt-[10rem] md:mt-[5rem] lg:mt-0 bg-[#F2F2F2] font-poppins px-4 py-10 md:py-16">
+        <h1 class="text-4xl font-poppins md:pt-6 text-black font-bold text-center">Contact Us</h1>
+        <p class="text-center font-poppins mt-2 px-6 md:px-20">
+            Reach out to us for any inquiries or feedback.
+        </p>
+        <div class="contact_main flex flex-wrap justify-center mt-14 gap-10 md:gap-20">
+            <div class="info w-full md:w-[34rem] text-[1.2rem] p-6 md:p-14 font-poppins   rounded-lg">
+                <div class="flex gap-3 mb-3">
+                    <span><i class="fa-solid fa-location-dot"></i></span>
+                    <span>123 Campsite Avenue, Wilderness, CA 98765</span>
+                </div>
+                <div class="flex gap-3 mb-3">
+                    <span><i class="fa-solid fa-envelope"></i></span>
+                    <span>info@campinggearexperts.com</span>
+                </div>
+                <div class="flex gap-3 mb-3">
+                    <span><i class="fa-solid fa-phone"></i></span>
+                    <span>(123) 456-7890</span>
+                </div>
+                <div class="flex gap-3 mb-3">
+                    <span><i class="fa-solid fa-clock"></i></span>
+                    <span>Monday-Friday: 9:00 AM - 5:00 PM</span>
+                </div>
+                <div class="flex gap-3 mb-3">
+                    <span><i class="fa-solid fa-clock"></i></span>
+                    <span>Saturday: 10:00 AM - 3:00 PM</span>
+                </div>
+                <div class="flex gap-3 mb-3">
+                    <span><i class="fa-solid fa-clock"></i></span>
+                    <span>Sunday: Closed</span>
+                </div>
+                <div class="flex gap-3">
+                    <span><i class="fa-solid fa-globe"></i></span>
+                    <span>www.codingnepalweb.com</span>
+                </div>
+            </div>
+            <div class="form w-full md:w-[34rem] flex flex-col gap-4  p-6 md:p-10 rounded-lg">
+                <input class="h-[3rem] p-4 w-full border border-gray-300 rounded-md" type="text" placeholder="Name*">
+                <input class="h-[3rem] p-4 w-full border border-gray-300 rounded-md" type="email" placeholder="Email*">
+                <textarea class="h-[14rem] p-4 w-full border border-gray-300 rounded-md text-gray-400" placeholder="Message*"></textarea>
+                <button class="py-3 px-7 rounded-lg bg-gray-700 hover:bg-black duration-300 text-white w-full md:w-auto">Send Message</button>
+            </div>
+        </div>
+    </div>
+    
+
+
+      <!-- Footer Section -->
+       <div class="footer_section h-[7rem] w-full bg-black flex flex-wrap justify-between items-center font-poppins px-[8rem]">
+       <div class="copy">
+        <h1 class="text-white font-medium font-poppins text-[1.1rem]">Copyright <i class="fa-regular fa-copyright"></i> 2025 All rights are reserved.</h1>
+       </div>
+       <div class="links flex gap-5">
+        <a href="#" class=" hidden md:block font-medium text-white hover:text-gray-800 duration-300">Home</a>
+        <a href="#" class=" hidden md:block font-medium text-white hover:text-gray-800 duration-300">Contact</a>
+       </div>
+       </div>
+
+
+
+
+    
+
+
+
+</body>
+<script src="script.js"></script>
+</html>
